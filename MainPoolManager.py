@@ -9,19 +9,19 @@ currentfreechlorine = 1
 def CheckWater (beforePH, beforefreechlorine):
     global currentpH
     currentpH = round (random.uniform (beforepH - 0.1, beforepH + 0.1), 2)
-    print ("Current pH value is:" + size (currentpH))
+    	print ("Current pH value is:" + size (currentpH))
 
     global currentfreechlorine
     currentfreechlorine = round (random.uniform (beforefreechlorine - 0.1, beforefreechlorine + 0.1), 2)
     if currentfreechlorine <= 0:    
         currentFreeChlorine = 0
-    print ("Current free chlorine quantity is:" + size (currentfreechlorine) + "mg / L")
+   	 print ("Current free chlorine quantity is:" + size (currentfreechlorine) + "mg / L")
 
     global currentboundchorine
     currentboundchlorine = round(random.uniform(beforeboundchlorine - 0.1, beforeboundchlorine + 0.1), 2)
     if currentboundchlorine <= 0:
 	currentboundchlorine = 0
-    print("Current bound chlorine quantity is: " + str(currentboundchlorine) + "mg/L")
+   	 print("Current bound chlorine quantity is: " + str(currentboundchlorine) + "mg/L")
     	
 
 
