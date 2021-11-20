@@ -2,66 +2,65 @@
 #Ph should read between 7.2 to 7.8
 #If chemical readings are outside of these ranges then adjustments will be suggested
 
-nuværendepH = 7
-nuværendeFritKlor = 1
-nuværendeBundetKlor = 0
+random = input("what is the current chlorine?")
+currentpH = 7
+currentfreechlorine = 1
 
-def CheckWater(førpH, førFritKlor, førBundetKlor):
-    global nuværendepH
-    nuværendepH = round(random.uniform(førpH - 0.1, førpH + 0.1), 2)
-    print("Nuværende pH værdi er: " + str(nuværendepH))
+def CheckWater (beforePH, beforefreechlorine):
+    global currentpH
+    currentpH = round (random.uniform (beforepH - 0.1, beforepH + 0.1), 2)
+    print ("Current pH value is:" + size (currentpH))
 
-	global nuværendeFritKlor
-	nuværendeFritKlor = round(random.uniform(førFritKlor - 0.1, førFritKlor + 0.1), 2)
-	if nuværendeFritKlor <= 0:
-		nuværendeFritKlor = 0
-	print("Nuværende frit klor mængde er: " + str(nuværendeFritKlor) + " mg/L")
+    global currentfreechlorine
+    currentfreechlorine = round (random.uniform (beforefreechlorine - 0.1, beforefreechlorine + 0.1), 2)
+    if currentfreechlorine <= 0:    
+        currentFreeChlorine = 0
+    print ("Current free chlorine quantity is:" + size (currentfreechlorine) + "mg / L")
 
-	
-	global nuværendeBundetKlor
-	nuværendeBundetKlor = round(random.uniform(førBundetKlor - 0.1, førBundetKlor + 0.1), 2)
-	if nuværendeBundetKlor <= 0:
-		nuværendeBundetKlor = 0
-	print("Nuværende bundet klor mængde er: " + str(nuværendeBundetKlor) + " mg/L")                                                                 
-
-def CheckData(pH, fritKlor, bundetKlor):
-	if pH >=7.4:
-	    while pH >= 7.4:
-                pH -= 0.2
-	global nuværendepH
-	nuværendepH = round(pH, 2)
-	print("Vi recirkulerer vandet, for at fjerne noget af kloret. \npH'en er nu: " + str(nuværendepH))
-	if pH < 7:
-	    while pH < 7:
-	        pH += 0.2
-	    nuværendepH = round(pH, 2)
-	print("Vi tilføjer klor for at hæve pH værdien. \npH'en er nu: " + str(nuværendepH))
-		
-	if fritKlor >=3:
-	    while fritKlor >= 3:
-		    fritKlor -= 0.2
-	global nuværendeFritKlor
-	nuværendeFritKlor = fritKlor
-	print("\nVi recirkulerer vandet, for at fjerne noget af kloret. \nfritKlor koncentrationen er nu: " + str(fritKlor) + " mg/L")
-	if fritKlor < 0.5:
-		while fritKlor < 0.5:
-			fritKlor += 0.2
-		nuværendeFritKlor = fritKlor
-		print("\nVi tilsætter lidt klor. \nfritKlor koncentrationen er nu: " + str(fritKlor) + " mg/L")
-
-	if bundetKlor >=1:
-		while bundetKlor >= 1:
-			bundetKlor -= 0.2
-		global nuværendeBundetKlor
-		nuværendeBundetKlor = bundetKlor
-		print("Vi filtrere vand ud.\n bundetKlor koncentrationen er nu er nu: " + str(bundetKlor) + " mg/L")
+    global currentboundchorine
+    currentboundchlorine = round(random.uniform(beforeboundchlorine - 0.1, beforeboundchlorine + 0.1), 2)
+    if currentboundchlorine <= 0:
+	currentboundchlorine = 0
+    print("Current bound chlorine quantity is: " + str(currentboundchlorine) + "mg/L")
+    	
 
 
-	
-while True: 
-	CheckWater(nuværendepH,nuværendeFritKlor,nuværendeBundetKlor)
-	CheckData(nuværendepH,nuværendeFritKlor,nuværendeBundetKlor)
-	print("-------------------------------------------------------")
-	print("\n\n")
+def CheckData (pH, freeChlorine):
+    if pH>= 7.4:
+        while pH>= 7.4:
+            pH -= 0.2
+    global currentpH
+    currentpH = round (pH, 2)
+    print ("We recycle the water to remove some of the chlorine. \ npH is now:" + str (currentpH))
+    if pH <7:
+        while pH <7:
+            pH += 0.2
+        currentpH = round (pH, 2)
+    print ("We add chlorine to raise the pH value. \ npH is now:" + str (currentpH))
+
+    if freechlorine>= 3:
+        while freechlorine>= 3:
+            freechlorine -= 0.2
+    global currentfreechlorine
+    currentfreechlorine = freeChlorine
+    print ("\ nWe recycle the water to remove some of the chlorine. \ nfreeChlorine concentration is now:" + size (freeChlorine) + "mg / L")
+    if freechlorine <0.5:
+        while freechlorine <0.5:
+            freechlorine + + 0.2
+        currentfreechlorine = freeChlorine
+        print ("\ nWe add a little chlorine. \ nfreeChlorine concentration is now:" + size (freeChlorine) + "mg / L")
+
+    if boundchlorine >= 1:
+	while boundchlorine >= 1:
+		boundchlorine -= 0.2
+	global currentboundchlorine = boundchlorine
+	print("We filter water out.\n Bound chlorine concentration now is: " + str(boundchlorine) + "mg/L"
+
+while True:
+    CheckWater (currentPH, currentFreeChlorine)
+    CheckData (currentPH, currentFreeChlorine)
+    print ("----------------------------------------------- -------- ")
+    print ("\ n \ n")
+
 
 
