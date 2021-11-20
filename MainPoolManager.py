@@ -17,13 +17,6 @@ def CheckWater (beforePH, beforefreechlorine):
         currentFreeChlorine = 0
    	 print ("Current free chlorine quantity is:" + size (currentfreechlorine) + "mg / L")
 
-    global currentboundchorine
-    currentboundchlorine = round(random.uniform(beforeboundchlorine - 0.1, beforeboundchlorine + 0.1), 2)
-    if currentboundchlorine <= 0:
-	currentboundchlorine = 0
-   	 print("Current bound chlorine quantity is: " + str(currentboundchlorine) + "mg/L")
-    	
-
 
 def CheckData (pH, freeChlorine):
     if pH>= 7.4:
@@ -50,12 +43,7 @@ def CheckData (pH, freeChlorine):
         currentfreechlorine = freeChlorine
         print ("\ nWe add a little chlorine. \ nfreeChlorine concentration is now:" + size (freeChlorine) + "mg / L")
 
-    if boundchlorine >= 1:
-	while boundchlorine >= 1:
-		boundchlorine -= 0.2
-	global currentboundchlorine = boundchlorine
-	print("We filter water out.\n Bound chlorine concentration now is: " + str(boundchlorine) + "mg/L"
-
+   
 while True:
     CheckWater (currentPH, currentFreeChlorine)
     CheckData (currentPH, currentFreeChlorine)
