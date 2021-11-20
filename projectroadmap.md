@@ -9,5 +9,4 @@
 - [X] Add Comments for clearer user understanding
 - [X] Translate entire code from Danish to English 
 - [X] Add proper indentations to reduce terminal errors 
-- [ ] Remove Bound Chlorine Variable
-- [ ] Add inputs for user customization 
+- [X] Remove Bound Chlorine Variable
