@@ -1,27 +1,6 @@
-# ALLE KRAV HER:
-
-# - pH skal ligge på 7 - 7,4
-# - Frit klor skal ligge på 0.5-3mg/l
-# - z   
-
-# ALLE MÅDER MAN LAVER JUSTERINGER PÅ:
-
-
-# I vores 
-
-# HOCL koncentration = frit Klor koncentration / volumen 
-# 4.5 pH == HOCL
-
-# HOCl/OCl-
-# Disse chlorforbindelser benævnes ofte samlet
-# som frit chlor. 
-
-# pis = ammonium
-# ammonium og frit klor = bundet klor
-# Stop børnene i at pisse i vandet
-# monoklorit = poolstank
-
- 
+#Free chlorine should read between 2 to 10
+#Ph should read between 7.2 to 7.8
+#If chemical readings are outside of these ranges then adjustments will be suggested
 
 nuværendepH = 7
 nuværendeFritKlor = 1
