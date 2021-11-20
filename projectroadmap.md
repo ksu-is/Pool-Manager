@@ -6,8 +6,8 @@
 - [x] Edit and commit readme file
 - [x] Explore and run other Python code relating to my project
 # Sprint 2 :D
-- [ ] Add Comments for clearer user understanding
-- [ ] Translate entire code from danish to english 
+- [X] Add Comments for clearer user understanding
+- [X] Translate entire code from Danish to English 
 - [ ] Add proper indentations to reduce terminal errors 
 - [ ] Remove Bound Chlorine Variable
 - [ ] Add inputs for user customization 
